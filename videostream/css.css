@@ -1,0 +1,195 @@
+:root{
+    --seablue: #07393C;
+    --richblack: rgb(70, 70, 70);
+    --bluesimple: #2C666E;
+    --bluesky: #90DDF0;
+}
+@font-face {font-family: robotor; src: url(RobotoR.ttf);}
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: robotor;}
+html{scroll-behavior: smooth;background: rgb(241, 241, 241);}
+    /* ============= main css =============== */
+.loginformbox{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    box-shadow: 0px 0px 10px 0px black;
+}
+#header h3{
+    color: var(--richblack);
+    cursor: pointer;
+    text-align: center;
+}
+#header h3:hover{
+    color: var(--seablue);
+}
+#header button{
+    border: none;
+    padding: 2px 5px;
+    margin-right: 5px;
+    border-radius: 2px;
+    color: white;
+    background-color: var(--richblack);
+}
+#header button:hover{
+    background: var(--bluesimple);
+    color: white;
+    transition: .2s;
+    cursor: pointer;
+}
+.boxvid{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    background-color: rgb(238, 237, 237);
+    border-radius: 3px;
+    border:1px solid rgb(143, 143, 143);
+    margin: 5px;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+    padding-bottom: 5px;
+    position: relative;
+}
+.box:hover{
+    cursor: pointer;
+    background-color: var(--bluesimple);
+    color: white;
+    border:1px solid var(--bluesimple);
+    transition: .2s;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+}
+.bot{
+    margin:0 10px;
+}
+.bot h4{
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+.box:hover .bot h4{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.bot div{
+    display: flex;
+    justify-content: space-between;
+}
+.bot div p:nth-child(2){
+    border-radius: 3px;
+    padding: 0 5px;
+    border: 1px solid var(--seablue);
+}
+.box:hover .bot div p:nth-child(2){
+    border: 1px solid white;
+}
+.bot h4{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.199);
+}
+.bot p{
+    margin-top: 10px;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+.bot .des{
+    margin-top: 10px;
+}
+.vid{
+    width: 300px;
+    z-index: -1;
+}
+/* ========= login page ========= */
+.login{
+    background-color: #f8f8f8;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--seablue);
+    border-radius: 3px;
+    width: 500px;
+    padding:30px 40px 50px 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.login h2{
+    width: 100%;
+    text-align: center;
+}
+.login input{
+    font-size: 20px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--seablue);
+    color: var(--seablue);
+    background-color: rgb(231, 231, 231);
+}
+.login label{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.14);
+    color: var(--seablue);
+    margin:20px 0 5px  0;
+}
+.login div{
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+}
+.loginbtn{
+    cursor: pointer;
+    margin-top: 30px;
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--seablue) ;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+.videoflooranchor{
+    text-decoration: none;
+    color: var(--seablue);
+}
+/* ========= seleced ========= */
+.selected{
+    position: fixed;
+    border: 1px solid var(--seablue);
+    width: 82%;
+    top: 38px;
+    transition: 1s;
+    z-index: 100;
+}
+.selected video{
+    width: 10%;
+    transition: .1s;
+}
+.boxvidselected{
+    margin-top: calc(50% + 100px);
+    transition: .5s;
+}
+/* ====== hidden ===== */
+.hidden p{
+    display: none;
+}
+.border{
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.box:hover .border{
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
